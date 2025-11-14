@@ -1,0 +1,114 @@
+<table>
+    <thead>
+        <tr>
+            <th>Test Case ID</th>
+            <th>Test Title / Feature</th>
+            <th>Preconditions</th>
+            <th>Test Steps (in plain language)</th>
+            <th>Expected Results</th>
+            <th>Actual Results</th>
+            <th>Status (Pass/Fail)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>TC-001</th>
+            <td>Create Account (Success)</td>
+            <td>User is on the &quot;&quot;Sign Up&quot;&quot; screen.</td>
+            <td>1. Enter a new, valid email (e.g., &quot;&quot;test@email.com&quot;&quot;).2. Enter a valid password.3. Click the &quot;&quot;Sign Up&quot;&quot; button.</td>
+            <td>The user is logged in and sees the main dashboard. A confirmation message appears.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-002</th>
+            <td>Create Account (Failure)</td>
+            <td>An account with the email &quot;&quot;test@email.com&quot;&quot; already exists.</td>
+            <td>1. Enter &quot;&quot;test@email.com&quot;&quot; in the email field.2. Enter any password.3. Click the &quot;&quot;Sign Up&quot;&quot; button.</td>
+            <td>An error message appears, stating &quot;&quot;Email is already used&quot;&quot; or &quot;&quot;Please log in.&quot;&quot;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-003</th>
+            <td>Login (Success)</td>
+            <td>An account with &quot;&quot;test@email.com&quot;&quot; and password &quot;&quot;pass123&quot;&quot; exists. User is logged out.</td>
+            <td>1. Go to the &quot;&quot;Login&quot;&quot; screen.2. Enter &quot;&quot;test@email.com&quot;&quot; for email.3. Enter &quot;&quot;pass123&quot;&quot; for password.4. Click &quot;&quot;Login.&quot;&quot;</td>
+            <td>The user is logged in and sees the main dashboard.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-004</th>
+            <td>Login (Failure)</td>
+            <td>An account with &quot;&quot;test@email.com&quot;&quot; and password &quot;&quot;pass123&quot;&quot; exists. User is logged out.</td>
+            <td>1. Go to the &quot;&quot;Login&quot;&quot; screen.2. Enter &quot;&quot;test@email.com&quot;&quot; for email.3. Enter &quot;&quot;wrongpassword&quot;&quot; for password.4. Click &quot;&quot;Login.&quot;&quot;</td>
+            <td>An error message appears, stating &quot;&quot;Invalid email or password.&quot;&quot; The user is not logged in.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-005</th>
+            <td>Add Manual Expense</td>
+            <td>User is logged in and on the dashboard.</td>
+            <td>1. Click the &quot;&quot;Add Expense&quot;&quot; (+) button.2. Enter Amount: $15.503. Select Category: &quot;&quot;Food&quot;&quot;4. Enter Date: [Today&#39;s Date]5. Click &quot;&quot;Save.&quot;&quot;</td>
+            <td>The user is returned to the dashboard. The new $15.50 expense appears in &quot;&quot;Recent Transactions.&quot;&quot;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-006</th>
+            <td>Verify Dashboard Update</td>
+            <td>Follow all steps from TC-005.</td>
+            <td>1. On the dashboard, look at the &quot;&quot;Spending by Category&quot;&quot; pie chart.2. Look at the &quot;&quot;Monthly Budget Remaining&quot;&quot; amount.</td>
+            <td>The &quot;&quot;Food&quot;&quot; slice of the pie chart has increased. The &quot;&quot;Budget Remaining&quot;&quot; amount has decreased by $15.50.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-007</th>
+            <td>Edit Expense</td>
+            <td>User has an existing expense: &quot;&quot;$10.00&quot;&quot; for &quot;&quot;Coffee.&quot;&quot;</td>
+            <td>1. Find the &quot;&quot;$10.00 - Coffee&quot;&quot; expense in the transaction list.2. Tap &quot;&quot;Edit.&quot;&quot;3. Change Amount to $12.00.4. Click &quot;&quot;Save.&quot;&quot;</td>
+            <td>The transaction list now shows &quot;&quot;$12.00 - Coffee.&quot;&quot; The dashboard totals are updated to reflect the $2.00 difference.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-008</th>
+            <td>Delete Expense</td>
+            <td>User has an existing expense: &quot;&quot;$12.00&quot;&quot; for &quot;&quot;Coffee.&quot;&quot;</td>
+            <td>1. Find the &quot;&quot;$12.00 - Coffee&quot;&quot; expense in the transaction list.2. Tap &quot;&quot;Delete.&quot;&quot;3. Confirm &quot;&quot;Yes&quot;&quot; on the confirmation prompt.</td>
+            <td>The expense is removed from the &quot;&quot;Recent Transactions&quot;&quot; list. The dashboard totals are updated.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-009</th>
+            <td>View Spending Report</td>
+            <td>User has 3 &quot;&quot;Food&quot;&quot; expenses and 2 &quot;&quot;Transport&quot;&quot; expenses.</td>
+            <td>1. Go to the &quot;&quot;Reports&quot;&quot; tab.2. Ensure the date range covers the expenses.3. Look at the pie chart.</td>
+            <td>The pie chart correctly displays two slices: &quot;&quot;Food&quot;&quot; and &quot;&quot;Transport,&quot;&quot; with proportions matching the spending.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-010</th>
+            <td>Over-Budget Notification</td>
+            <td>User has set a $50 budget for &quot;&quot;Social.&quot;&quot; Current spending is $40.</td>
+            <td>1. Add a new expense:   - Amount: $15.00   - Category: &quot;&quot;Social&quot;&quot;2. Click &quot;&quot;Save.&quot;&quot;</td>
+            <td>A push notification appears (or an in-app alert) stating &quot;&quot;Warning: You are over your Social budget.&quot;&quot;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TC-011</th>
+            <td>Export CSV Report</td>
+            <td>User is on the &quot;&quot;Reports&quot;&quot; tab.</td>
+            <td>1. Click the &quot;&quot;Export as CSV&quot;&quot; button.</td>
+            <td>A CSV file (e.g., &quot;&quot;CATT_Report.csv&quot;&quot;) is downloaded to the user&#39;s device or sharing options appear.</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
