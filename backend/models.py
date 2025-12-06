@@ -11,11 +11,16 @@ class Expense:
     date: str
     note: str = ""
 
+    def __post_init__(self):
+        if self.amount < 0:
+            raise ValueError("Expense amount cannot be negative")
+        
 class User:
     def __init__(self, email, password):
+        if "@" not in email or "." not in email:
+            raise ValueError("Invalid email format")
         self.email = email
         self.password = password
-        # In a real app, we would hash the password here
     
     def login(self, email, password):
         # Stub for login logic
