@@ -7,6 +7,6 @@ The frontend is designed without any external UI or charting libraries to keep s
 
 We have an Expense Form where you can Enter amount, category, date, and description for your transactions.
 
-We also have a dashboard where you can view an overview of your financial activity including, motnhly budget remaining, spending by category in the form of a Pie CHart, and recent transactions.
+We also have a dashboard where you can view an overview of your financial activity including, motnhly budget remaining, spending by category in the form of a Pie Chart, and recent transactions.
  
 We have added tests for our application, and the Black Box Test Plan Static Page is here: https://sennoel.github.io/CATT/
